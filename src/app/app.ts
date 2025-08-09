@@ -8,6 +8,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('AngularCurso');
+  title = "Angular Info";
   description = "Esto es un archivo donde pruebo diferentes funciones de angular"
+  autor = "Ignacio Molina"
 }
