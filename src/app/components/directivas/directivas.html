@@ -1,0 +1,36 @@
+<hr/>
+
+<h1>Directivas</h1>
+
+<h2>En Angular, una directiva es una instrucción que le dice al template cómo debe comportarse o renderizarse un elemento.</h2>
+
+<h3>Directiva <code>&#64;if</code> ejemplo:</h3>
+
+<!-- app.component.html -->
+@if (isLoggedIn) {
+  <p>Bienvenido, {{ username }} 🎉</p>
+} @else {
+  <p>Por favor inicia sesión 🔑</p>
+}
+
+<h3>Directiva <code>&#64;for</code> ejemplo:</h3>
+
+<ul>
+  @for (fruta of frutas; track fruta) {
+    <li>{{ fruta }}</li>
+  }
+</ul>
+
+<h3>Directiva <code>&#64;switch</code> ejemplo:</h3>
+
+@switch (dia) {
+  @case ('Lunes') {
+    <p>Hoy es lunes 😴</p>
+  }
+  @case ('Viernes') {
+    <p>¡Viernes! 🎉</p>
+  }
+  @default {
+    <p>Es un día cualquiera 📅</p>
+  }
+}
