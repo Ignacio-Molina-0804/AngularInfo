@@ -11,14 +11,17 @@
 
     <ul>
 
-        <li>Objeto 1</li>
-        <li>Objeto 2</li>
+        @for (objeto of objetos; track objeto) {
+            <li>{{objeto}}</li>
+        } @empty {
+            <li>No hay objetos para mostrar</li>
+        }
 
     </ul>
 
     <h4>{{nuevoObjeto}}</h4>
 
     <input [(ngModel)]="nuevoObjeto" type="text" placeholder="Agregar un nuevo objeto"/>
-    <button>Añadir</button>
+    <button (click)="addObjeto()">Añadir</button>
 
 </div>

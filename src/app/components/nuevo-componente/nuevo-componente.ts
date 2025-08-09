@@ -15,6 +15,17 @@ export class NuevoComponente {
   objetos: string[] = [];
   nuevoObjeto: string = "";
 
+  addObjeto(){
+
+    if(this.nuevoObjeto && this.nuevoObjeto.trim()){
+
+      this.objetos.push(this.nuevoObjeto.trim());
+
+      this.nuevoObjeto = "";
+
+    }
+
+  }
 
 
 }
